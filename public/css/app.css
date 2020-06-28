@@ -10940,8 +10940,28 @@ a.text-dark:focus {
   font-weight: 900;
 }
 
-.card-body {
+.new-user {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+}
+
+.self-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 

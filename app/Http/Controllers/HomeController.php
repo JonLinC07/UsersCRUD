@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use app\User;
+use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -22,10 +22,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        $users = User::get();
+    // public function index()
+    // {
+    //     $users = User::get();
 
-        return view('home', compact('users'));
-    }
+    //     return view('home', compact('users'));
+    // }
 }
