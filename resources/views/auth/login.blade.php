@@ -3,6 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        <h3 class="text-center">Welcome to UsersCRUD. If you are member please log in. If you want to be a member please contact with admin</h3>
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>

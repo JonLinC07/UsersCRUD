@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function __contruct() {
+        $this->middleware('auth');
+    }
+
+
     public function index() {
         $users = User::all();
 
@@ -70,7 +75,6 @@ class UserController extends Controller
             'admin' => $admin_flag,
             'address' => request('address'),
             'phone' => request('phone'),
-            'password' => Hash::make(request('password')),
         ]);
 
         return redirect()->route('user.show', $user);

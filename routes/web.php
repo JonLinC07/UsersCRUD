@@ -17,12 +17,32 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'UserController@index')->name('home');
-Route::get('/home/create', 'UserController@create')->name('user.create');
-Route::get('/home/{user}/edit', 'UserController@edit')->name('user.edit');
-Route::post('/home', 'UserController@store')->name('user.store');
-Route::get('/home/{user}', 'UserController@show')->name('user.show');
-Route::patch('/home/{user}', 'UserController@update')->name('user.update');
-Route::delete('/home/{user}', 'UserController@destroy')->name('user.destroy');
+Route::get('/home', 'UserController@index')
+    ->name('home')
+    ->middleware('auth');
+
+Route::get('/home/create', 'UserController@create')
+    ->name('user.create')
+    ->middleware('auth');
+
+Route::get('/home/{user}/edit', 'UserController@edit')
+    ->name('user.edit')
+    ->middleware('auth');
+
+Route::post('/home', 'UserController@store')
+    ->name('user.store')
+    ->middleware('auth');
+
+Route::get('/home/{user}', 'UserController@show')
+    ->name('user.show')
+    ->middleware('auth');
+
+Route::patch('/home/{user}', 'UserController@update')
+    ->name('user.update')
+    ->middleware('auth');
+
+Route::delete('/home/{user}', 'UserController@destroy')
+    ->name('user.destroy')
+    ->middleware('auth');
 
 
